@@ -88,7 +88,7 @@
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+            this.LandPrint1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
@@ -135,11 +135,10 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.User_NowName = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.print_land = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.Page_SysManage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_LandSuitability = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -163,7 +162,6 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
             this.splitContainerControl4 = new DevExpress.XtraEditors.SplitContainerControl();
             this.xtraTabControl_Left = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage_MapLayers = new DevExpress.XtraTab.XtraTabPage();
@@ -183,15 +181,6 @@
             this.axPageLayoutControl1 = new ESRI.ArcGIS.Controls.AxPageLayoutControl();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.User_OnLoad = new DevExpress.XtraTab.XtraTabPage();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.User_Name = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.User_Password = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.User_Register = new DevComponents.DotNetBar.ButtonX();
-            this.User_Login = new DevComponents.DotNetBar.ButtonX();
             this.Tab_Zhibiao = new DevExpress.XtraTab.XtraTabPage();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
@@ -209,6 +198,7 @@
             this.ScaleLable = new DevExpress.XtraEditors.LabelControl();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             buttongroup = new DevExpress.XtraBars.BarButtonGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -216,7 +206,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
-            this.expandablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4)).BeginInit();
             this.splitContainerControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_Left)).BeginInit();
@@ -238,8 +227,6 @@
             this.splitContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.User_OnLoad.SuspendLayout();
-            this.panelEx1.SuspendLayout();
             this.Tab_Zhibiao.SuspendLayout();
             this.panelEx2.SuspendLayout();
             this.SuspendLayout();
@@ -353,7 +340,7 @@
             this.barButtonItem20,
             this.barButtonItem21,
             this.barCheckItem1,
-            this.barButtonItem22,
+            this.LandPrint1,
             this.barButtonItem24,
             this.barButtonItem25,
             this.barButtonItem26,
@@ -397,10 +384,11 @@
             this.barButtonItem64,
             this.barButtonItem65,
             this.User_Status,
-            this.User_NowName});
+            this.User_NowName,
+            this.print_land});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.ribbonControl1.MaxItemId = 137;
+            this.ribbonControl1.MaxItemId = 138;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3,
@@ -781,7 +769,6 @@
             this.barButtonItem13.Id = 81;
             this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
             this.barButtonItem13.Name = "barButtonItem13";
-            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -851,13 +838,13 @@
             this.barCheckItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barCheckItem1.LargeGlyph")));
             this.barCheckItem1.Name = "barCheckItem1";
             // 
-            // barButtonItem22
+            // LandPrint1
             // 
-            this.barButtonItem22.Caption = "打印输出";
-            this.barButtonItem22.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.Glyph")));
-            this.barButtonItem22.Id = 92;
-            this.barButtonItem22.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.LargeGlyph")));
-            this.barButtonItem22.Name = "barButtonItem22";
+            this.LandPrint1.Caption = "打印输出";
+            this.LandPrint1.Glyph = ((System.Drawing.Image)(resources.GetObject("LandPrint1.Glyph")));
+            this.LandPrint1.Id = 92;
+            this.LandPrint1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("LandPrint1.LargeGlyph")));
+            this.LandPrint1.Name = "LandPrint1";
             // 
             // barButtonItem24
             // 
@@ -1188,13 +1175,20 @@
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
+            // print_land
+            // 
+            this.print_land.Caption = "打印输出";
+            this.print_land.Glyph = ((System.Drawing.Image)(resources.GetObject("print_land.Glyph")));
+            this.print_land.Id = 137;
+            this.print_land.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("print_land.LargeGlyph")));
+            this.print_land.Name = "print_land";
+            this.print_land.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.print_land_ItemClick);
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup5,
-            this.ribbonPageGroup2,
-            this.Page_SysManage});
+            this.ribbonPageGroup5});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "地图基础操作";
             // 
@@ -1218,23 +1212,6 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "辅助工具";
             // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btn_ManageOfData);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "数据管理";
-            // 
-            // Page_SysManage
-            // 
-            this.Page_SysManage.ItemLinks.Add(this.barButtonItem12);
-            this.Page_SysManage.ItemLinks.Add(this.User_Status);
-            this.Page_SysManage.ItemLinks.Add(this.User_NowName);
-            this.Page_SysManage.Name = "Page_SysManage";
-            this.Page_SysManage.Text = "系统管理";
-            this.Page_SysManage.Visible = false;
-            // 
             // Page_LandSuitability
             // 
             this.Page_LandSuitability.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1243,7 +1220,6 @@
             this.ribbonPageGroup10});
             this.Page_LandSuitability.Name = "Page_LandSuitability";
             this.Page_LandSuitability.Text = "土地适宜性评价";
-            this.Page_LandSuitability.Visible = false;
             // 
             // ribbonPageGroup8
             // 
@@ -1262,8 +1238,7 @@
             // 
             // ribbonPageGroup10
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.barCheckItem1);
-            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem22);
+            this.ribbonPageGroup10.ItemLinks.Add(this.print_land);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "专题图输出";
             // 
@@ -1275,7 +1250,6 @@
             this.ribbonPageGroup12});
             this.Page_LandRisk.Name = "Page_LandRisk";
             this.Page_LandRisk.Text = "土地灾害风险评价";
-            this.Page_LandRisk.Visible = false;
             // 
             // ribbonPageGroup13
             // 
@@ -1308,7 +1282,6 @@
             this.ribbonPageGroup19});
             this.Page_LandEcology.Name = "Page_LandEcology";
             this.Page_LandEcology.Text = "土地生态功能评价";
-            this.Page_LandEcology.Visible = false;
             // 
             // ribbonPageGroup16
             // 
@@ -1346,7 +1319,6 @@
             this.ribbonPageGroup22});
             this.Pae_LandExtent.Name = "Pae_LandExtent";
             this.Pae_LandExtent.Text = "建设用地空间拓展";
-            this.Pae_LandExtent.Visible = false;
             // 
             // ribbonPageGroup21
             // 
@@ -1372,7 +1344,6 @@
             this.ribbonPageGroup25});
             this.Page_InfoQuery.Name = "Page_InfoQuery";
             this.Page_InfoQuery.Text = "拓展信息查询";
-            this.Page_InfoQuery.Visible = false;
             // 
             // ribbonPageGroup23
             // 
@@ -1420,7 +1391,7 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 147);
             this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.expandablePanel1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.splitContainerControl4);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
@@ -1429,48 +1400,18 @@
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
-            // expandablePanel1
-            // 
-            this.expandablePanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.expandablePanel1.CollapseDirection = DevComponents.DotNetBar.eCollapseDirection.RightToLeft;
-            this.expandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.expandablePanel1.Controls.Add(this.splitContainerControl4);
-            this.expandablePanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.expandablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.expandablePanel1.HideControlsWhenCollapsed = true;
-            this.expandablePanel1.Location = new System.Drawing.Point(0, 0);
-            this.expandablePanel1.Name = "expandablePanel1";
-            this.expandablePanel1.Size = new System.Drawing.Size(241, 468);
-            this.expandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.expandablePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.expandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.expandablePanel1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.expandablePanel1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.expandablePanel1.Style.GradientAngle = 90;
-            this.expandablePanel1.TabIndex = 0;
-            this.expandablePanel1.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanel1.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.expandablePanel1.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.expandablePanel1.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
-            this.expandablePanel1.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.expandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.expandablePanel1.TitleStyle.GradientAngle = 90;
-            this.expandablePanel1.TitleText = "图层面板";
-            this.expandablePanel1.ExpandedChanged += new DevComponents.DotNetBar.ExpandChangeEventHandler(this.expandablePanel1_ExpandedChanged);
-            // 
             // splitContainerControl4
             // 
             this.splitContainerControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl4.Horizontal = false;
-            this.splitContainerControl4.Location = new System.Drawing.Point(0, 26);
+            this.splitContainerControl4.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl4.Name = "splitContainerControl4";
             this.splitContainerControl4.Panel1.Controls.Add(this.xtraTabControl_Left);
             this.splitContainerControl4.Panel1.Text = "Panel1";
             this.splitContainerControl4.Panel2.Controls.Add(this.axMapControl2);
             this.splitContainerControl4.Panel2.Text = "Panel2";
-            this.splitContainerControl4.Size = new System.Drawing.Size(241, 442);
-            this.splitContainerControl4.SplitterPosition = 293;
+            this.splitContainerControl4.Size = new System.Drawing.Size(241, 468);
+            this.splitContainerControl4.SplitterPosition = 304;
             this.splitContainerControl4.TabIndex = 0;
             this.splitContainerControl4.Text = "splitContainerControl4";
             // 
@@ -1482,7 +1423,7 @@
             this.xtraTabControl_Left.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl_Left.Name = "xtraTabControl_Left";
             this.xtraTabControl_Left.SelectedTabPage = this.xtraTabPage_MapLayers;
-            this.xtraTabControl_Left.Size = new System.Drawing.Size(241, 293);
+            this.xtraTabControl_Left.Size = new System.Drawing.Size(241, 304);
             this.xtraTabControl_Left.TabIndex = 0;
             this.xtraTabControl_Left.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage_MapLayers,
@@ -1492,7 +1433,7 @@
             // 
             this.xtraTabPage_MapLayers.Controls.Add(this.axTOCControl1);
             this.xtraTabPage_MapLayers.Name = "xtraTabPage_MapLayers";
-            this.xtraTabPage_MapLayers.Size = new System.Drawing.Size(235, 264);
+            this.xtraTabPage_MapLayers.Size = new System.Drawing.Size(235, 275);
             this.xtraTabPage_MapLayers.Text = "图层";
             // 
             // axTOCControl1
@@ -1501,7 +1442,7 @@
             this.axTOCControl1.Location = new System.Drawing.Point(0, 0);
             this.axTOCControl1.Name = "axTOCControl1";
             this.axTOCControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl1.OcxState")));
-            this.axTOCControl1.Size = new System.Drawing.Size(235, 264);
+            this.axTOCControl1.Size = new System.Drawing.Size(235, 275);
             this.axTOCControl1.TabIndex = 0;
             this.axTOCControl1.OnMouseDown += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseDownEventHandler(this.axTOCControl1_OnMouseDown);
             // 
@@ -1509,7 +1450,7 @@
             // 
             this.xtraTabPage_DataNav.Controls.Add(this.listView1);
             this.xtraTabPage_DataNav.Name = "xtraTabPage_DataNav";
-            this.xtraTabPage_DataNav.Size = new System.Drawing.Size(235, 264);
+            this.xtraTabPage_DataNav.Size = new System.Drawing.Size(235, 275);
             this.xtraTabPage_DataNav.Text = "数据";
             // 
             // listView1
@@ -1519,7 +1460,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(235, 264);
+            this.listView1.Size = new System.Drawing.Size(235, 275);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
@@ -1534,7 +1475,7 @@
             this.axMapControl2.Location = new System.Drawing.Point(0, 0);
             this.axMapControl2.Name = "axMapControl2";
             this.axMapControl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl2.OcxState")));
-            this.axMapControl2.Size = new System.Drawing.Size(241, 144);
+            this.axMapControl2.Size = new System.Drawing.Size(241, 159);
             this.axMapControl2.TabIndex = 0;
             this.axMapControl2.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.axMapControl2_OnMouseDown);
             // 
@@ -1658,137 +1599,11 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.User_OnLoad;
+            this.xtraTabControl1.SelectedTabPage = this.Tab_Zhibiao;
             this.xtraTabControl1.Size = new System.Drawing.Size(242, 383);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.User_OnLoad,
             this.Tab_Zhibiao});
-            // 
-            // User_OnLoad
-            // 
-            this.User_OnLoad.Controls.Add(this.panelEx1);
-            this.User_OnLoad.Name = "User_OnLoad";
-            this.User_OnLoad.Size = new System.Drawing.Size(236, 354);
-            this.User_OnLoad.Text = "用户登录";
-            // 
-            // panelEx1
-            // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.labelX3);
-            this.panelEx1.Controls.Add(this.User_Name);
-            this.panelEx1.Controls.Add(this.User_Password);
-            this.panelEx1.Controls.Add(this.labelX1);
-            this.panelEx1.Controls.Add(this.labelX2);
-            this.panelEx1.Controls.Add(this.User_Register);
-            this.panelEx1.Controls.Add(this.User_Login);
-            this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx1.Location = new System.Drawing.Point(0, 0);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(236, 354);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 1;
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(21, 156);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(101, 23);
-            this.labelX3.TabIndex = 15;
-            this.labelX3.Text = "还没有用户名？";
-            // 
-            // User_Name
-            // 
-            // 
-            // 
-            // 
-            this.User_Name.Border.Class = "TextBoxBorder";
-            this.User_Name.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.User_Name.ButtonCustom.Tooltip = "";
-            this.User_Name.ButtonCustom2.Tooltip = "";
-            this.User_Name.Location = new System.Drawing.Point(82, 27);
-            this.User_Name.Name = "User_Name";
-            this.User_Name.PreventEnterBeep = true;
-            this.User_Name.Size = new System.Drawing.Size(126, 22);
-            this.User_Name.TabIndex = 13;
-            this.User_Name.Text = "admit";
-            // 
-            // User_Password
-            // 
-            // 
-            // 
-            // 
-            this.User_Password.Border.Class = "TextBoxBorder";
-            this.User_Password.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.User_Password.ButtonCustom.Tooltip = "";
-            this.User_Password.ButtonCustom2.Tooltip = "";
-            this.User_Password.Location = new System.Drawing.Point(83, 74);
-            this.User_Password.Name = "User_Password";
-            this.User_Password.PasswordChar = '*';
-            this.User_Password.PreventEnterBeep = true;
-            this.User_Password.Size = new System.Drawing.Size(125, 22);
-            this.User_Password.TabIndex = 14;
-            this.User_Password.Text = "aaaa";
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(21, 27);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
-            this.labelX1.TabIndex = 8;
-            this.labelX1.Text = "用户名：";
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(30, 75);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(50, 23);
-            this.labelX2.TabIndex = 9;
-            this.labelX2.Text = "密码：";
-            // 
-            // User_Register
-            // 
-            this.User_Register.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.User_Register.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.User_Register.Location = new System.Drawing.Point(133, 156);
-            this.User_Register.Name = "User_Register";
-            this.User_Register.Size = new System.Drawing.Size(75, 23);
-            this.User_Register.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.User_Register.TabIndex = 12;
-            this.User_Register.Text = "注册";
-            this.User_Register.Click += new System.EventHandler(this.User_Register_Click);
-            // 
-            // User_Login
-            // 
-            this.User_Login.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.User_Login.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.User_Login.Location = new System.Drawing.Point(133, 116);
-            this.User_Login.Name = "User_Login";
-            this.User_Login.Size = new System.Drawing.Size(75, 23);
-            this.User_Login.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.User_Login.TabIndex = 11;
-            this.User_Login.Text = "登录";
-            this.User_Login.Click += new System.EventHandler(this.User_Login_Click);
             // 
             // Tab_Zhibiao
             // 
@@ -1963,6 +1778,13 @@
             this.barButtonItem23.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.LargeGlyph")));
             this.barButtonItem23.Name = "barButtonItem23";
             // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem32);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem33);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "专题图输出";
+            // 
             // MainForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -1984,7 +1806,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
-            this.expandablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4)).EndInit();
             this.splitContainerControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_Left)).EndInit();
@@ -2008,8 +1829,6 @@
             this.splitContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.User_OnLoad.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
             this.Tab_Zhibiao.ResumeLayout(false);
             this.panelEx2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -2055,7 +1874,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem btn_ManageOfMap;
         private DevExpress.XtraBars.BarButtonItem btn_ManageOfData;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem btn_FullExtent;
         private DevExpress.XtraBars.BarButtonItem btn_Select;
         private DevExpress.XtraBars.BarButtonItem btn_NextView;
@@ -2075,7 +1893,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
-        private DevComponents.DotNetBar.ExpandablePanel expandablePanel1;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarSubItem barSubItem2;
@@ -2111,7 +1928,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem20;
         private DevExpress.XtraBars.BarButtonItem barButtonItem21;
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
+        private DevExpress.XtraBars.BarButtonItem LandPrint1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
@@ -2122,7 +1939,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem31;
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
         private DevExpress.XtraBars.BarButtonItem barButtonItem33;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup Page_SysManage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
@@ -2179,15 +1995,6 @@
         private DevExpress.XtraBars.BarEditItem User_NowName;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage User_OnLoad;
-        private DevComponents.DotNetBar.PanelEx panelEx1;
-        private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX User_Name;
-        private DevComponents.DotNetBar.Controls.TextBoxX User_Password;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.ButtonX User_Register;
-        private DevComponents.DotNetBar.ButtonX User_Login;
         private DevExpress.XtraTab.XtraTabPage Tab_Zhibiao;
         private DevComponents.DotNetBar.PanelEx panelEx2;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl4;
@@ -2197,6 +2004,8 @@
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.ButtonX buttonX5;
+        private DevExpress.XtraBars.BarButtonItem print_land;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }
 

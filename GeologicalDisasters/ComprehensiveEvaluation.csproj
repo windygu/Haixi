@@ -361,6 +361,7 @@
     <EmbeddedResource Include="Modules\ucFileNavPanel.resx">
       <DependentUpon>ucFileNavPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -464,6 +465,10 @@
     <ProjectReference Include="..\GISHandler\GISHandler.csproj">
       <Project>{48dee3df-3cd2-41cb-8097-36fe2ce960d7}</Project>
       <Name>GISHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Print\Print.csproj">
+      <Project>{c986d36b-0c0d-4eb7-a9b9-caa7dd77edba}</Project>
+      <Name>Print</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

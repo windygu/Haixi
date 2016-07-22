@@ -23,6 +23,7 @@ using System.Web.Http;
 using _sdnMap;
 using IdentifyTool;
 
+
 namespace ComprehensiveEvaluation
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -51,7 +52,7 @@ namespace ComprehensiveEvaluation
         public MainForm()
         {
             InitializeComponent();
-            width = this.Width;
+            width = Width;
         }
 
 
@@ -70,19 +71,19 @@ namespace ComprehensiveEvaluation
         {
             setFormSize();
             //axMapControl1.LoadMxFile(SystemSet.Base_Map + "\\基础底图.mxd", 0, Type.Missing);
-            axMapControl1.LoadMxFile(@"G:\海西综合评价系统\数据库\邵武DEM.mxd", 0, Type.Missing);  
+            axMapControl1.LoadMxFile(@"G:\MyProject\海西综合评价系统\数据库\邵武DEM.mxd", 0, Type.Missing);  
             //axMapControl1.AddShapeFile(@"I:\四平项目\实验数据", "东丰县行政区域");
             m_menuMap = new ToolbarMenuClass();
             m_menuLayer = new ToolbarMenuClass();
             p_menuLayer = new ToolbarMenuClass();
 
-            p_menuLayer.AddItem(new AddName(this.axPageLayoutControl1), -1, 0, true, esriCommandStyles.esriCommandStyleTextOnly);
+            p_menuLayer.AddItem(new AddName(axPageLayoutControl1), -1, 0, true, esriCommandStyles.esriCommandStyleTextOnly);
 
             p_menuLayer.AddItem(new AddLegend(), -1, 1, true, esriCommandStyles.esriCommandStyleTextOnly);
 
-            p_menuLayer.AddItem(new AddNorthArrow(this.axPageLayoutControl1), -1, 2, true, esriCommandStyles.esriCommandStyleTextOnly);
+            p_menuLayer.AddItem(new AddNorthArrow(axPageLayoutControl1), -1, 2, true, esriCommandStyles.esriCommandStyleTextOnly);
 
-            p_menuLayer.AddItem(new AddScal(this.axPageLayoutControl1), -1, 3, true, esriCommandStyles.esriCommandStyleTextOnly);
+            p_menuLayer.AddItem(new AddScal(axPageLayoutControl1), -1, 3, true, esriCommandStyles.esriCommandStyleTextOnly);
             //打开文档菜单
            // m_menuMap.AddItem(new GISTools(AddData), -1, 0, false, esriCommandStyles.esriCommandStyleIconAndText);
             //刷新
@@ -102,8 +103,8 @@ namespace ComprehensiveEvaluation
             m_menuLayer.AddItem(new RemoveLayer(), -1, 0, false, esriCommandStyles.esriCommandStyleTextOnly);
             //放大到整个图层
             m_menuLayer.AddItem(new ZoomToLayer(), -1, 1, true, esriCommandStyles.esriCommandStyleTextOnly);
-            m_menuLayer.SetHook((IMapControl3)this.axMapControl1.Object);
-            m_menuMap.SetHook((IMapControl3)this.axMapControl1.Object);
+            m_menuLayer.SetHook((IMapControl3)axMapControl1.Object);
+            m_menuMap.SetHook((IMapControl3)axMapControl1.Object);
             axTOCControl1.SetBuddyControl(axMapControl1);
            // axTOCControl1.SetBuddyControl(axMapControl2);
         }
@@ -124,8 +125,8 @@ namespace ComprehensiveEvaluation
                 FileInfo fi = new FileInfo(ofd.FileName);
                 if (fi.Exists)
                 {
-                    this.axMapControl1.LoadMxFile(fi.FullName);
-                    this.axMapControl1.ActiveView.Refresh();
+                    axMapControl1.LoadMxFile(fi.FullName);
+                    axMapControl1.ActiveView.Refresh();
                 }
             }
         }
@@ -136,12 +137,12 @@ namespace ComprehensiveEvaluation
             edit = true;
             if (edit)
             {
-                GISHandler.GISTools.ExportImage(this.axPageLayoutControl1.ActiveView);
+                GISHandler.GISTools.ExportImage(axPageLayoutControl1.ActiveView);
                 edit = false;
             }
 
             else
-                GISHandler.GISTools.ExportImage(this.axMapControl1.ActiveView);
+                GISHandler.GISTools.ExportImage(axMapControl1.ActiveView);
 
            // 
         }
@@ -163,14 +164,14 @@ namespace ComprehensiveEvaluation
                     this.axMapControl1.ActiveView.Refresh();
                 }
             }*/
-          GISHandler.GISTools.AddData_SHP(this.axMapControl1);
+          GISHandler.GISTools.AddData_SHP(axMapControl1);
             
         //  axMapControl1.AddLayerFromFile(@"I:\四平项目\东丰县2000数据库", 1);
         }
         //移动图层
         private void btn_Pan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GISHandler.GISTools.Pan(this.axMapControl1);
+            GISHandler.GISTools.Pan(axMapControl1);
         }
         //放大
         private void btn_ZoomIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -251,12 +252,12 @@ namespace ComprehensiveEvaluation
         {
             xtraTabPage_DataNav.Show();
             // LoadFiles("G:\\数据库\\坐标数据");
-            GISHandler.GISTools.GainFile(@"G:\四平项目\数据库\坐标数据", this.listView1, this.imageList1);
+            GISHandler.GISTools.GainFile(@"G:\四平项目\数据库\坐标数据", listView1, imageList1);
             axMapControl1.ClearLayers();
             //axMapControl1.LoadMxFile(@"G:\数据库\地图数据\演示数据.mxd", 0, Type.Missing);
             axMapControl1.OnMouseDown += axMapControl1_OnMouseDown;
             edit = true;
-            expandablePanel1.Expanded = true;
+           
 
         }
        
@@ -264,7 +265,7 @@ namespace ComprehensiveEvaluation
         private void axMapControl1_OnMouseMove(object sender, ESRI.ArcGIS.Controls.IMapControlEvents2_OnMouseMoveEvent e)
        {
            //显示当前比例尺
-           Coordinate.Text = "比例尺 1:" + ((long)this.axMapControl1.MapScale).ToString() + "  , 当前坐标X=" + e.mapX.ToString("0.000") + "°E,Y=" + e.mapY.ToString("0.000") + "°N,";
+           Coordinate.Text = "比例尺 1:" + ((long)axMapControl1.MapScale).ToString() + "  , 当前坐标X=" + e.mapX.ToString("0.000") + "°E,Y=" + e.mapY.ToString("0.000") + "°N,";
        identifyDialog.OnMouseMove(e.mapX, e.mapY);
             //显示当前坐标信息
          
@@ -292,14 +293,14 @@ namespace ComprehensiveEvaluation
         //mapcontrol和pagelayerout挂链；
         private void axMapControl1_OnMapReplaced(object sender, ESRI.ArcGIS.Controls.IMapControlEvents2_OnMapReplacedEvent e)
         {
-            GISHandler.GISTools.copyToPageLayerOut(this.axMapControl1, axPageLayoutControl1);
-            GISHandler.GISTools.onMapReplace(this.axMapControl1, this.axMapControl2);
+            GISHandler.GISTools.copyToPageLayerOut(axMapControl1, axPageLayoutControl1);
+            GISHandler.GISTools.onMapReplace(axMapControl1, axMapControl2);
         }
         //mapcontrol和pagelayerout挂链；
         private void axMapControl1_OnAfterScreenDraw(object sender, ESRI.ArcGIS.Controls.IMapControlEvents2_OnAfterScreenDrawEvent e)
         {
-            GISHandler.GISTools.ScreenDraw(this.axMapControl1, axPageLayoutControl1);
-            GISHandler.GISTools.copyToPageLayerOut(this.axMapControl1, axPageLayoutControl1);
+            GISHandler.GISTools.ScreenDraw(axMapControl1, axPageLayoutControl1);
+            GISHandler.GISTools.copyToPageLayerOut(axMapControl1, axPageLayoutControl1);
         }
         //画线+测量
         private void axMapControl1_OnMouseDown(object sender, ESRI.ArcGIS.Controls.IMapControlEvents2_OnMouseDownEvent e)
@@ -309,19 +310,19 @@ namespace ComprehensiveEvaluation
             {
                 if (isMeasureLong)
                 {
-                    GISHandler.GISTools.CreatLine(this.axMapControl1);
+                    GISHandler.GISTools.CreatLine(axMapControl1);
                     isMeasureLong = false;
                 }
                 if (isMeasureArea)
                 {
-                   GISHandler.GISTools.MeasureArea(this.axMapControl1);
+                   GISHandler.GISTools.MeasureArea(axMapControl1);
                     // 
 
                     isMeasureArea = false;
                 }
                 if(polygonSt)
                 {
-                    GISHandler.GISTools.FreePolygonSt(this.axMapControl1, SystemSet.Base_Map+"\\处理数据库\\图层数据");
+                    GISHandler.GISTools.FreePolygonSt(axMapControl1, SystemSet.Base_Map+"\\处理数据库\\图层数据");
                     polygonSt = false;
                 }
                 if (attribute)
@@ -346,9 +347,9 @@ namespace ComprehensiveEvaluation
             //    axMapControl1.Pan(); 
 
             //    axMapControl1.Refresh(esriViewDrawPhase.esriViewBackground, null, null); 
-                GISHandler.GISTools.setNull(this.axMapControl1);
+                GISHandler.GISTools.setNull(axMapControl1);
                     //弹出右键菜单
-                IMapControl3 m_mapControl = (IMapControl3)this.axMapControl1.Object;
+                IMapControl3 m_mapControl = (IMapControl3)axMapControl1.Object;
 
                 m_menuMap.PopupMenu(e.x, e.y, m_mapControl.hWnd);
               
@@ -360,7 +361,7 @@ namespace ComprehensiveEvaluation
         private void btn_Save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //GISHandler.GISTools.Save(this.axMapControl1);
-            GISHandler.GISTools.SaveDocument2(this.axMapControl1);
+            GISHandler.GISTools.SaveDocument2(axMapControl1);
 
         }
 
@@ -371,7 +372,7 @@ namespace ComprehensiveEvaluation
         /// <param name="e"></param>
         private void btn_Refresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GISHandler.GISTools.refresh(this.axMapControl1);
+            GISHandler.GISTools.refresh(axMapControl1);
            // GISHandler.GISTools.setNull(this.axMapControl1);
             attribute = false;
         }
@@ -398,7 +399,7 @@ namespace ComprehensiveEvaluation
                 return;
 
             //设置CustomProperty为layer (用于自定义的Layer命令)  
-            IMapControl3 m_mapControl = (IMapControl3)this.axMapControl1.Object;
+            IMapControl3 m_mapControl = (IMapControl3)axMapControl1.Object;
             m_mapControl.CustomProperty = layer;
             //弹出右键菜单
             if (item == esriTOCControlItem.esriTOCControlItemMap)
@@ -420,7 +421,7 @@ namespace ComprehensiveEvaluation
             }
             if (e.button == 2)
             {
-                IPageLayoutControl p_mapControl = (IPageLayoutControl)this.axPageLayoutControl1.Object;
+                IPageLayoutControl p_mapControl = (IPageLayoutControl)axPageLayoutControl1.Object;
 
                 p_menuLayer.PopupMenu(e.x, e.y, p_mapControl.hWnd);
             }
@@ -445,7 +446,7 @@ namespace ComprehensiveEvaluation
        
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GISHandler.GISTools.clipRaster(this.axMapControl1);
+            GISHandler.GISTools.clipRaster(axMapControl1);
             
         
         
@@ -613,35 +614,6 @@ namespace ComprehensiveEvaluation
             }
         }
 
-      
-       
-
-        private void expandablePanel1_ExpandedChanged(object sender, DevComponents.DotNetBar.ExpandedChangeEventArgs e)
-        {
-
-            if (!expandablePanel1.Expanded)
-            {
-                splitContainerControl1.SplitterPosition = Convert.ToInt32(0.03 * width);
-                splitContainerControl2.SplitterPosition = Convert.ToInt32(0.8 * width);
-            }
-            else
-            {
-                splitContainerControl2.SplitterPosition = Convert.ToInt32(0.6 * width);
-                
-                splitContainerControl1.SplitterPosition = Convert.ToInt32(0.2 * width);
-            }
-        }
-
-      
-
-        private void DataManage_ExpandedChanged(object sender, DevComponents.DotNetBar.ExpandedChangeEventArgs e)
-        {
-            //if (!DataManage.Expanded)
-            //    splitContainerControl1.SplitterPosition = 40;
-            //else
-            //    splitContainerControl1.SplitterPosition = 241;
-        }
-
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             xtraTabPage_MapLayers.Show();
@@ -650,24 +622,24 @@ namespace ComprehensiveEvaluation
 
         private void but_AddShp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GISHandler.GISTools.AddData_SHP(this.axMapControl1);
+            GISHandler.GISTools.AddData_SHP(axMapControl1);
         }
 
         private void but_AddUDB_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GISHandler.GISTools.AddData(this.axMapControl1);
+            GISHandler.GISTools.AddData(axMapControl1);
 
         }
 
         private void but_AddRST_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GISHandler.GISTools.AddData_RST(this.axMapControl1);
+            GISHandler.GISTools.AddData_RST(axMapControl1);
 
         }
 
         private void but_AddCAD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            GISHandler.GISTools.AddData_CAD(this.axMapControl1);
+            GISHandler.GISTools.AddData_CAD(axMapControl1);
 
         }
 
@@ -693,7 +665,7 @@ namespace ComprehensiveEvaluation
         {
             if (MessageBox.Show("是否退出系统？", "退出", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                Close();
             }
             else
                 return;
@@ -702,24 +674,6 @@ namespace ComprehensiveEvaluation
         private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             polygonSt = true;
-        }
-
-        private void expandableSplitter1_ExpandedChanged(object sender, DevComponents.DotNetBar.ExpandedChangeEventArgs e)
-        {
-
-        }
-
-        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-           
-        }
-
-        private void User_Register_Click(object sender, EventArgs e)
-        {
-            UserRegister userRegister = new UserRegister();
-            userRegister.StartPosition = FormStartPosition.CenterScreen;
-            userRegister.Show();
-            userRegister.TopMost = true;
         }
         public void output_Info(string info)
         {
@@ -733,54 +687,7 @@ namespace ComprehensiveEvaluation
             catch
             { }
         }
-        private void User_Login_Click(object sender, EventArgs e)
-        {
-            UserRegister rs = new UserRegister();
-            try
-            {
-                string sqlWord = "SELECT 用户信息表.用户名, 用户信息表.密码 FROM 用户信息表";// WHERE ((用户信息表.用户名)='" + textBoxX1.Text + "')";
-                DataTable dt = rs.SqlSearch(sqlWord, "用户");
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    if (dt.Rows[i][0].ToString() == User_Name.Text)
-                    {
-                        if (dt.Rows[i][1].ToString() == User_Password.Text)
-                        {
-                            MessageBox.Show("用户：" + User_Name.Text + "\r\n" + "您已成功登录!", "登录成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.ModelEnable(true);
-                            User_NowName.Caption = this.User_Name.Text;
-                            output_Info(String.Format("{0}登录成功！",User_Name.Text));
-                            User_OnLoad.PageVisible = false;
-                            //this.Close();
-                            //if (data.set)
-                            //{
-                            //    Setting set = new Setting();
-                            //    set.StartPosition = FormStartPosition.CenterScreen;
-                            //    set.Show();
-                            //}
-                            return;
-                        }
-                        else
-                        {
-                            MessageBox.Show("用户密码错误,请重新输入");
-                            return;
-                        }
-
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-                MessageBox.Show("用户名错误,请重新输入");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        //窗体可用性
+        /*窗体可用性
         public void ModelEnable(bool able)
         {
             Pae_LandExtent.Visible = able;
@@ -789,9 +696,9 @@ namespace ComprehensiveEvaluation
             Page_LandRisk.Visible = able;
             Page_LandSuitability.Visible = able;
             //splitContainerControl1.Visible = able;
-            Page_SysManage.Visible = able;
+          
         }
-
+ */
         private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Tab_Zhibiao.Select();
@@ -858,7 +765,7 @@ namespace ComprehensiveEvaluation
 
         private void buttonX4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
@@ -892,7 +799,12 @@ namespace ComprehensiveEvaluation
             //insertValue.Show();
             GISHandler.GISTools.loadForm(insertValue);
         }
-        
+
+        private void print_land_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Print.PageLayoutControl.frmPageLayoutControl frmpage = new Print.PageLayoutControl.frmPageLayoutControl();
+            frmpage.Show();
+        }
        
     }
 }
