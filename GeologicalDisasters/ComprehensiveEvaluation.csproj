@@ -72,25 +72,9 @@
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=12.0.0.1, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
-    <Reference Include="DevExpress.CodeRush.Common, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.CodeRush.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.CodeRush.Interop, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.CodeRush.StructuralParser, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.CodeRush.VSCore, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.Data.v14.1">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.DXCore.Controls, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Controls.Data.v6.3, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Controls.Utils.v6.3, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Controls.XtraBars.v6.3, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Controls.XtraEditors.v6.3, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Controls.XtraTreeList.v6.3, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Decompiler, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Localization, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.MetaData, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Parser, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.DXCore.Platform, Version=14.1.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v14.1.Core">
       <Private>True</Private>
@@ -273,6 +257,12 @@
     <Compile Include="ExcuteWinform\OverLayer.Designer.cs">
       <DependentUpon>OverLayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_task.Designer.cs">
+      <DependentUpon>new_task.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start.cs" />
     <Compile Include="FormStart.cs">
       <SubType>Form</SubType>
@@ -329,12 +319,14 @@
     <Compile Include="TargetSystem\Target.Designer.cs">
       <DependentUpon>Target.cs</DependentUpon>
     </Compile>
+    <Compile Include="TargetSystem\targetManager.cs" />
     <Compile Include="TargetSystem\Weight.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TargetSystem\Weight.Designer.cs">
       <DependentUpon>Weight.cs</DependentUpon>
     </Compile>
+    <Compile Include="taskControl.cs" />
     <Compile Include="UserManagement\DbConnectionMySQL.cs" />
     <Compile Include="UserManagement\UserRegister.cs">
       <SubType>Form</SubType>
@@ -360,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\ucFileNavPanel.resx">
       <DependentUpon>ucFileNavPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_task.resx">
+      <DependentUpon>new_task.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -497,6 +492,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\layers.ico" />
+    <None Include="Resources\指标.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

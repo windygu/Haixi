@@ -32,11 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Weight));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.Pro_weight = new System.Windows.Forms.ListView();
             this.zhuanjia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.target_name = new System.Windows.Forms.ListView();
+            this.zhibiao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.target_weight = new System.Windows.Forms.ListView();
+            this.Factory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.setGrade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.setWeight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
@@ -49,10 +53,6 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.zhibiao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Factory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.setGrade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.setWeight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
@@ -85,7 +85,7 @@
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl2.Name = "splitContainerControl2";
-            this.splitContainerControl2.Panel1.Controls.Add(this.listView1);
+            this.splitContainerControl2.Panel1.Controls.Add(this.Pro_weight);
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
@@ -94,16 +94,16 @@
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
             // 
-            // listView1
+            // Pro_weight
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Pro_weight.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.zhuanjia});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(146, 271);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.Pro_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pro_weight.Location = new System.Drawing.Point(0, 0);
+            this.Pro_weight.Name = "Pro_weight";
+            this.Pro_weight.Size = new System.Drawing.Size(146, 271);
+            this.Pro_weight.TabIndex = 0;
+            this.Pro_weight.UseCompatibleStateImageBehavior = false;
             // 
             // zhuanjia
             // 
@@ -115,38 +115,59 @@
             this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl3.Name = "splitContainerControl3";
-            this.splitContainerControl3.Panel1.Controls.Add(this.listView2);
+            this.splitContainerControl3.Panel1.Controls.Add(this.target_name);
             this.splitContainerControl3.Panel1.Text = "Panel1";
-            this.splitContainerControl3.Panel2.Controls.Add(this.listView3);
+            this.splitContainerControl3.Panel2.Controls.Add(this.target_weight);
             this.splitContainerControl3.Panel2.Text = "Panel2";
             this.splitContainerControl3.Size = new System.Drawing.Size(467, 271);
             this.splitContainerControl3.SplitterPosition = 195;
             this.splitContainerControl3.TabIndex = 0;
             this.splitContainerControl3.Text = "splitContainerControl3";
             // 
-            // listView2
+            // target_name
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.target_name.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.zhibiao});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Location = new System.Drawing.Point(0, 0);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(195, 271);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.target_name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.target_name.Location = new System.Drawing.Point(0, 0);
+            this.target_name.Name = "target_name";
+            this.target_name.Size = new System.Drawing.Size(195, 271);
+            this.target_name.TabIndex = 0;
+            this.target_name.UseCompatibleStateImageBehavior = false;
+            this.target_name.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.target_name_ItemChecked);
             // 
-            // listView3
+            // zhibiao
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.zhibiao.Text = "模块指标选择";
+            this.zhibiao.Width = 200;
+            // 
+            // target_weight
+            // 
+            this.target_weight.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Factory,
             this.setGrade,
             this.setWeight});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.Location = new System.Drawing.Point(0, 0);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(267, 271);
-            this.listView3.TabIndex = 0;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.target_weight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.target_weight.Location = new System.Drawing.Point(0, 0);
+            this.target_weight.Name = "target_weight";
+            this.target_weight.Size = new System.Drawing.Size(267, 271);
+            this.target_weight.TabIndex = 0;
+            this.target_weight.UseCompatibleStateImageBehavior = false;
+            // 
+            // Factory
+            // 
+            this.Factory.Text = "因子";
+            this.Factory.Width = 100;
+            // 
+            // setGrade
+            // 
+            this.setGrade.Text = "打分";
+            this.setGrade.Width = 80;
+            // 
+            // setWeight
+            // 
+            this.setWeight.Text = "权重";
+            this.setWeight.Width = 80;
             // 
             // panelEx1
             // 
@@ -285,26 +306,6 @@
             this.imageList1.Images.SetKeyName(0, "专家");
             this.imageList1.Images.SetKeyName(1, "指标");
             // 
-            // zhibiao
-            // 
-            this.zhibiao.Text = "模块指标选择";
-            this.zhibiao.Width = 200;
-            // 
-            // Factory
-            // 
-            this.Factory.Text = "因子";
-            this.Factory.Width = 100;
-            // 
-            // setGrade
-            // 
-            this.setGrade.Text = "打分";
-            this.setGrade.Width = 80;
-            // 
-            // setWeight
-            // 
-            this.setWeight.Text = "权重";
-            this.setWeight.Width = 80;
-            // 
             // Weight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -343,9 +344,9 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView Pro_weight;
+        private System.Windows.Forms.ListView target_name;
+        private System.Windows.Forms.ListView target_weight;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ColumnHeader zhuanjia;
         private DevComponents.DotNetBar.ButtonX buttonX4;

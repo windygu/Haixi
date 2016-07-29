@@ -98,9 +98,9 @@
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
+            this.risk_print = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem35 = new DevExpress.XtraBars.BarButtonItem();
+            this.ecology_print = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem36 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem37 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem38 = new DevExpress.XtraBars.BarButtonItem();
@@ -112,7 +112,7 @@
             this.barButtonItem44 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem45 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem46 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem47 = new DevExpress.XtraBars.BarButtonItem();
+            this.final_print = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem48 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem49 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem50 = new DevExpress.XtraBars.BarButtonItem();
@@ -135,24 +135,40 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.User_NowName = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.print_land = new DevExpress.XtraBars.BarButtonItem();
+            this.land_print = new DevExpress.XtraBars.BarButtonItem();
+            this.land_new = new DevExpress.XtraBars.BarButtonItem();
+            this.land_zhibiao = new DevExpress.XtraBars.BarButtonItem();
+            this.land_start = new DevExpress.XtraBars.BarButtonItem();
+            this.risk_new = new DevExpress.XtraBars.BarButtonItem();
+            this.risk_zhibiao = new DevExpress.XtraBars.BarButtonItem();
+            this.risk_start = new DevExpress.XtraBars.BarButtonItem();
+            this.ecology_new = new DevExpress.XtraBars.BarButtonItem();
+            this.ecology_zhibiao = new DevExpress.XtraBars.BarButtonItem();
+            this.ecology_start = new DevExpress.XtraBars.BarButtonItem();
+            this.final_new = new DevExpress.XtraBars.BarButtonItem();
+            this.final_zhibiao = new DevExpress.XtraBars.BarButtonItem();
+            this.final_start = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_LandSuitability = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.land_evaluation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_LandRisk = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.risk_evaluation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_LandEcology = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ecology_evaluation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Pae_LandExtent = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.final_evaluation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup21 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Page_InfoQuery = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -184,8 +200,6 @@
             this.Tab_Zhibiao = new DevExpress.XtraTab.XtraTabPage();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.Info_Show = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
@@ -199,6 +213,8 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
             buttongroup = new DevExpress.XtraBars.BarButtonGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -350,9 +366,9 @@
             this.barButtonItem30,
             this.barButtonItem31,
             this.barButtonItem32,
-            this.barButtonItem33,
+            this.risk_print,
             this.barButtonItem34,
-            this.barButtonItem35,
+            this.ecology_print,
             this.barButtonItem36,
             this.barButtonItem37,
             this.barButtonItem38,
@@ -364,7 +380,7 @@
             this.barButtonItem44,
             this.barButtonItem45,
             this.barButtonItem46,
-            this.barButtonItem47,
+            this.final_print,
             this.barButtonItem48,
             this.barButtonItem49,
             this.barButtonItem50,
@@ -385,10 +401,23 @@
             this.barButtonItem65,
             this.User_Status,
             this.User_NowName,
-            this.print_land});
+            this.land_print,
+            this.land_new,
+            this.land_zhibiao,
+            this.land_start,
+            this.risk_new,
+            this.risk_zhibiao,
+            this.risk_start,
+            this.ecology_new,
+            this.ecology_zhibiao,
+            this.ecology_start,
+            this.final_new,
+            this.final_zhibiao,
+            this.final_start,
+            this.barButtonItem33});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.ribbonControl1.MaxItemId = 138;
+            this.ribbonControl1.MaxItemId = 152;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3,
@@ -412,7 +441,7 @@
             // 
             this.btn_Pan.Caption = "浏览";
             this.btn_Pan.Id = 1;
-            this.btn_Pan.LargeGlyph = global::ComprehensiveEvaluation.Properties.Resources.icon_pan_32;
+            this.btn_Pan.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btn_Pan.LargeGlyph")));
             this.btn_Pan.Name = "btn_Pan";
             this.btn_Pan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Pan_ItemClick);
             // 
@@ -533,7 +562,7 @@
             this.btn_Data_StatisticTables.Caption = "导入坐标";
             this.btn_Data_StatisticTables.Glyph = ((System.Drawing.Image)(resources.GetObject("btn_Data_StatisticTables.Glyph")));
             this.btn_Data_StatisticTables.Id = 28;
-            this.btn_Data_StatisticTables.LargeGlyph = global::ComprehensiveEvaluation.Properties.Resources.pointValue;
+            this.btn_Data_StatisticTables.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btn_Data_StatisticTables.LargeGlyph")));
             this.btn_Data_StatisticTables.Name = "btn_Data_StatisticTables";
             this.btn_Data_StatisticTables.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -550,7 +579,7 @@
             // 
             this.btn_AnalysisFuture.Caption = "趋势分析";
             this.btn_AnalysisFuture.Id = 30;
-            this.btn_AnalysisFuture.LargeGlyph = global::ComprehensiveEvaluation.Properties.Resources.statistic;
+            this.btn_AnalysisFuture.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btn_AnalysisFuture.LargeGlyph")));
             this.btn_AnalysisFuture.Name = "btn_AnalysisFuture";
             // 
             // barButtonItem2
@@ -760,7 +789,7 @@
             // 
             this.barButtonItem12.Caption = "用户管理";
             this.barButtonItem12.Id = 80;
-            this.barButtonItem12.LargeGlyph = global::ComprehensiveEvaluation.Properties.Resources.aboutUs_64;
+            this.barButtonItem12.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.LargeGlyph")));
             this.barButtonItem12.Name = "barButtonItem12";
             // 
             // barButtonItem13
@@ -910,13 +939,13 @@
             this.barButtonItem32.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem32.LargeGlyph")));
             this.barButtonItem32.Name = "barButtonItem32";
             // 
-            // barButtonItem33
+            // risk_print
             // 
-            this.barButtonItem33.Caption = "打印输出";
-            this.barButtonItem33.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.Glyph")));
-            this.barButtonItem33.Id = 102;
-            this.barButtonItem33.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.LargeGlyph")));
-            this.barButtonItem33.Name = "barButtonItem33";
+            this.risk_print.Caption = "成果输出";
+            this.risk_print.Glyph = ((System.Drawing.Image)(resources.GetObject("risk_print.Glyph")));
+            this.risk_print.Id = 102;
+            this.risk_print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("risk_print.LargeGlyph")));
+            this.risk_print.Name = "risk_print";
             // 
             // barButtonItem34
             // 
@@ -926,13 +955,13 @@
             this.barButtonItem34.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem34.LargeGlyph")));
             this.barButtonItem34.Name = "barButtonItem34";
             // 
-            // barButtonItem35
+            // ecology_print
             // 
-            this.barButtonItem35.Caption = "打印输出";
-            this.barButtonItem35.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem35.Glyph")));
-            this.barButtonItem35.Id = 104;
-            this.barButtonItem35.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem35.LargeGlyph")));
-            this.barButtonItem35.Name = "barButtonItem35";
+            this.ecology_print.Caption = "成果输出";
+            this.ecology_print.Glyph = ((System.Drawing.Image)(resources.GetObject("ecology_print.Glyph")));
+            this.ecology_print.Id = 104;
+            this.ecology_print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ecology_print.LargeGlyph")));
+            this.ecology_print.Name = "ecology_print";
             // 
             // barButtonItem36
             // 
@@ -1013,13 +1042,13 @@
             this.barButtonItem46.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem46.LargeGlyph")));
             this.barButtonItem46.Name = "barButtonItem46";
             // 
-            // barButtonItem47
+            // final_print
             // 
-            this.barButtonItem47.Caption = "打印输出";
-            this.barButtonItem47.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem47.Glyph")));
-            this.barButtonItem47.Id = 116;
-            this.barButtonItem47.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem47.LargeGlyph")));
-            this.barButtonItem47.Name = "barButtonItem47";
+            this.final_print.Caption = "成果输出";
+            this.final_print.Glyph = ((System.Drawing.Image)(resources.GetObject("final_print.Glyph")));
+            this.final_print.Id = 116;
+            this.final_print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("final_print.LargeGlyph")));
+            this.final_print.Name = "final_print";
             // 
             // barButtonItem48
             // 
@@ -1175,14 +1204,115 @@
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
-            // print_land
+            // land_print
             // 
-            this.print_land.Caption = "打印输出";
-            this.print_land.Glyph = ((System.Drawing.Image)(resources.GetObject("print_land.Glyph")));
-            this.print_land.Id = 137;
-            this.print_land.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("print_land.LargeGlyph")));
-            this.print_land.Name = "print_land";
-            this.print_land.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.print_land_ItemClick);
+            this.land_print.Caption = "打印输出";
+            this.land_print.Glyph = ((System.Drawing.Image)(resources.GetObject("land_print.Glyph")));
+            this.land_print.Id = 137;
+            this.land_print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("land_print.LargeGlyph")));
+            this.land_print.Name = "land_print";
+            this.land_print.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.print_land_ItemClick);
+            // 
+            // land_new
+            // 
+            this.land_new.Caption = "新建评价任务";
+            this.land_new.Glyph = ((System.Drawing.Image)(resources.GetObject("land_new.Glyph")));
+            this.land_new.Id = 138;
+            this.land_new.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("land_new.LargeGlyph")));
+            this.land_new.Name = "land_new";
+            this.land_new.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.land_new_ItemClick);
+            // 
+            // land_zhibiao
+            // 
+            this.land_zhibiao.Caption = "设置评价指标";
+            this.land_zhibiao.Id = 139;
+            this.land_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("land_zhibiao.LargeGlyph")));
+            this.land_zhibiao.Name = "land_zhibiao";
+            // 
+            // land_start
+            // 
+            this.land_start.Caption = "开始评价";
+            this.land_start.Glyph = ((System.Drawing.Image)(resources.GetObject("land_start.Glyph")));
+            this.land_start.Id = 141;
+            this.land_start.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("land_start.LargeGlyph")));
+            this.land_start.Name = "land_start";
+            // 
+            // risk_new
+            // 
+            this.risk_new.Caption = "新建评价任务";
+            this.risk_new.Glyph = ((System.Drawing.Image)(resources.GetObject("risk_new.Glyph")));
+            this.risk_new.Id = 142;
+            this.risk_new.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("risk_new.LargeGlyph")));
+            this.risk_new.Name = "risk_new";
+            this.risk_new.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.risk_new_ItemClick);
+            // 
+            // risk_zhibiao
+            // 
+            this.risk_zhibiao.Caption = "设置评价指标";
+            this.risk_zhibiao.Id = 143;
+            this.risk_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("risk_zhibiao.LargeGlyph")));
+            this.risk_zhibiao.Name = "risk_zhibiao";
+            // 
+            // risk_start
+            // 
+            this.risk_start.Caption = "开始评价";
+            this.risk_start.Glyph = ((System.Drawing.Image)(resources.GetObject("risk_start.Glyph")));
+            this.risk_start.Id = 144;
+            this.risk_start.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("risk_start.LargeGlyph")));
+            this.risk_start.Name = "risk_start";
+            // 
+            // ecology_new
+            // 
+            this.ecology_new.Caption = "新建评价任务";
+            this.ecology_new.Glyph = ((System.Drawing.Image)(resources.GetObject("ecology_new.Glyph")));
+            this.ecology_new.Id = 145;
+            this.ecology_new.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ecology_new.LargeGlyph")));
+            this.ecology_new.Name = "ecology_new";
+            this.ecology_new.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ecology_new_ItemClick);
+            // 
+            // ecology_zhibiao
+            // 
+            this.ecology_zhibiao.Caption = "设置评价指标";
+            this.ecology_zhibiao.Id = 146;
+            this.ecology_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ecology_zhibiao.LargeGlyph")));
+            this.ecology_zhibiao.Name = "ecology_zhibiao";
+            // 
+            // ecology_start
+            // 
+            this.ecology_start.Caption = "开始评价";
+            this.ecology_start.Glyph = ((System.Drawing.Image)(resources.GetObject("ecology_start.Glyph")));
+            this.ecology_start.Id = 147;
+            this.ecology_start.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ecology_start.LargeGlyph")));
+            this.ecology_start.Name = "ecology_start";
+            // 
+            // final_new
+            // 
+            this.final_new.Caption = "新建评价任务";
+            this.final_new.Glyph = ((System.Drawing.Image)(resources.GetObject("final_new.Glyph")));
+            this.final_new.Id = 148;
+            this.final_new.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("final_new.LargeGlyph")));
+            this.final_new.Name = "final_new";
+            this.final_new.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.final_new_ItemClick);
+            // 
+            // final_zhibiao
+            // 
+            this.final_zhibiao.Caption = "设置评价指标";
+            this.final_zhibiao.Id = 149;
+            this.final_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("final_zhibiao.LargeGlyph")));
+            this.final_zhibiao.Name = "final_zhibiao";
+            // 
+            // final_start
+            // 
+            this.final_start.Caption = "开始评价";
+            this.final_start.Glyph = ((System.Drawing.Image)(resources.GetObject("final_start.Glyph")));
+            this.final_start.Id = 150;
+            this.final_start.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("final_start.LargeGlyph")));
+            this.final_start.Name = "final_start";
+            // 
+            // barButtonItem33
+            // 
+            this.barButtonItem33.Id = 151;
+            this.barButtonItem33.Name = "barButtonItem33";
             // 
             // ribbonPage3
             // 
@@ -1215,11 +1345,20 @@
             // Page_LandSuitability
             // 
             this.Page_LandSuitability.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.land_evaluation,
             this.ribbonPageGroup8,
-            this.ribbonPageGroup9,
             this.ribbonPageGroup10});
             this.Page_LandSuitability.Name = "Page_LandSuitability";
             this.Page_LandSuitability.Text = "土地适宜性评价";
+            // 
+            // land_evaluation
+            // 
+            this.land_evaluation.ItemLinks.Add(this.land_new);
+            this.land_evaluation.ItemLinks.Add(this.land_zhibiao);
+            this.land_evaluation.ItemLinks.Add(this.land_start);
+            this.land_evaluation.ItemLinks.Add(this.land_print);
+            this.land_evaluation.Name = "land_evaluation";
+            this.land_evaluation.Text = "土地适宜性评价";
             // 
             // ribbonPageGroup8
             // 
@@ -1227,29 +1366,32 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem18);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "空间分析";
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem19);
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem20);
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem21);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "适宜性评价";
+            this.ribbonPageGroup8.Visible = false;
             // 
             // ribbonPageGroup10
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.print_land);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "专题图输出";
+            this.ribbonPageGroup10.Visible = false;
             // 
             // Page_LandRisk
             // 
             this.Page_LandRisk.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.risk_evaluation,
             this.ribbonPageGroup13,
             this.ribbonPageGroup14,
             this.ribbonPageGroup12});
             this.Page_LandRisk.Name = "Page_LandRisk";
             this.Page_LandRisk.Text = "土地灾害风险评价";
+            // 
+            // risk_evaluation
+            // 
+            this.risk_evaluation.ItemLinks.Add(this.risk_new);
+            this.risk_evaluation.ItemLinks.Add(this.risk_zhibiao);
+            this.risk_evaluation.ItemLinks.Add(this.risk_start);
+            this.risk_evaluation.ItemLinks.Add(this.risk_print);
+            this.risk_evaluation.Name = "risk_evaluation";
+            this.risk_evaluation.Text = "土地灾害风险评价";
             // 
             // ribbonPageGroup13
             // 
@@ -1257,6 +1399,7 @@
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem28);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "统计分析";
+            this.ribbonPageGroup13.Visible = false;
             // 
             // ribbonPageGroup14
             // 
@@ -1265,17 +1408,19 @@
             this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem31);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             this.ribbonPageGroup14.Text = "风险评价";
+            this.ribbonPageGroup14.Visible = false;
             // 
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem32);
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem33);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "专题图输出";
+            this.ribbonPageGroup12.Visible = false;
             // 
             // Page_LandEcology
             // 
             this.Page_LandEcology.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ecology_evaluation,
             this.ribbonPageGroup16,
             this.ribbonPageGroup17,
             this.ribbonPageGroup18,
@@ -1283,12 +1428,22 @@
             this.Page_LandEcology.Name = "Page_LandEcology";
             this.Page_LandEcology.Text = "土地生态功能评价";
             // 
+            // ecology_evaluation
+            // 
+            this.ecology_evaluation.ItemLinks.Add(this.ecology_new);
+            this.ecology_evaluation.ItemLinks.Add(this.ecology_zhibiao);
+            this.ecology_evaluation.ItemLinks.Add(this.ecology_start);
+            this.ecology_evaluation.ItemLinks.Add(this.ecology_print);
+            this.ecology_evaluation.Name = "ecology_evaluation";
+            this.ecology_evaluation.Text = "土地生态功能评价";
+            // 
             // ribbonPageGroup16
             // 
             this.ribbonPageGroup16.ItemLinks.Add(this.barButtonItem39);
             this.ribbonPageGroup16.ItemLinks.Add(this.barButtonItem40);
             this.ribbonPageGroup16.Name = "ribbonPageGroup16";
             this.ribbonPageGroup16.Text = "生态数据处理";
+            this.ribbonPageGroup16.Visible = false;
             // 
             // ribbonPageGroup17
             // 
@@ -1296,6 +1451,7 @@
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem42);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             this.ribbonPageGroup17.Text = "空间分析";
+            this.ribbonPageGroup17.Visible = false;
             // 
             // ribbonPageGroup18
             // 
@@ -1304,37 +1460,49 @@
             this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem45);
             this.ribbonPageGroup18.Name = "ribbonPageGroup18";
             this.ribbonPageGroup18.Text = "服务功能与安全评价";
+            this.ribbonPageGroup18.Visible = false;
             // 
             // ribbonPageGroup19
             // 
             this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem34);
-            this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem35);
             this.ribbonPageGroup19.Name = "ribbonPageGroup19";
             this.ribbonPageGroup19.Text = "专题图输出";
+            this.ribbonPageGroup19.Visible = false;
             // 
             // Pae_LandExtent
             // 
             this.Pae_LandExtent.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.final_evaluation,
             this.ribbonPageGroup21,
             this.ribbonPageGroup22});
             this.Pae_LandExtent.Name = "Pae_LandExtent";
-            this.Pae_LandExtent.Text = "建设用地空间拓展";
+            this.Pae_LandExtent.Text = "空间拓展综合评价";
+            // 
+            // final_evaluation
+            // 
+            this.final_evaluation.ItemLinks.Add(this.final_new);
+            this.final_evaluation.ItemLinks.Add(this.final_zhibiao);
+            this.final_evaluation.ItemLinks.Add(this.final_start);
+            this.final_evaluation.ItemLinks.Add(this.final_print);
+            this.final_evaluation.Name = "final_evaluation";
+            this.final_evaluation.Text = "空间拓展综合评价";
             // 
             // ribbonPageGroup21
             // 
-            this.ribbonPageGroup21.ItemLinks.Add(this.barButtonItem51);
             this.ribbonPageGroup21.ItemLinks.Add(this.barButtonItem52);
+            this.ribbonPageGroup21.ItemLinks.Add(this.barButtonItem51);
             this.ribbonPageGroup21.ItemLinks.Add(this.barButtonItem53);
             this.ribbonPageGroup21.ItemLinks.Add(this.barButtonItem54);
             this.ribbonPageGroup21.Name = "ribbonPageGroup21";
             this.ribbonPageGroup21.Text = "空间拓展综合评价";
+            this.ribbonPageGroup21.Visible = false;
             // 
             // ribbonPageGroup22
             // 
             this.ribbonPageGroup22.ItemLinks.Add(this.barButtonItem46);
-            this.ribbonPageGroup22.ItemLinks.Add(this.barButtonItem47);
             this.ribbonPageGroup22.Name = "ribbonPageGroup22";
             this.ribbonPageGroup22.Text = "专题图输出";
+            this.ribbonPageGroup22.Visible = false;
             // 
             // Page_InfoQuery
             // 
@@ -1344,6 +1512,7 @@
             this.ribbonPageGroup25});
             this.Page_InfoQuery.Name = "Page_InfoQuery";
             this.Page_InfoQuery.Text = "拓展信息查询";
+            this.Page_InfoQuery.Visible = false;
             // 
             // ribbonPageGroup23
             // 
@@ -1489,7 +1658,7 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(908, 468);
-            this.splitContainerControl2.SplitterPosition = 661;
+            this.splitContainerControl2.SplitterPosition = 783;
             this.splitContainerControl2.TabIndex = 3;
             this.splitContainerControl2.Text = "splitContainerControl2";
             // 
@@ -1500,7 +1669,7 @@
             this.xtraTabControl_Center.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl_Center.Name = "xtraTabControl_Center";
             this.xtraTabControl_Center.SelectedTabPage = this.xtraTabPage3;
-            this.xtraTabControl_Center.Size = new System.Drawing.Size(661, 468);
+            this.xtraTabControl_Center.Size = new System.Drawing.Size(783, 468);
             this.xtraTabControl_Center.TabIndex = 2;
             this.xtraTabControl_Center.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
@@ -1512,7 +1681,7 @@
             this.xtraTabPage3.Controls.Add(this.axLicenseControl1);
             this.xtraTabPage3.Controls.Add(this.axMapControl1);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(655, 439);
+            this.xtraTabPage3.Size = new System.Drawing.Size(777, 439);
             this.xtraTabPage3.Text = "地图";
             // 
             // Coordinate
@@ -1541,7 +1710,7 @@
             this.axMapControl1.Location = new System.Drawing.Point(0, 0);
             this.axMapControl1.Name = "axMapControl1";
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
-            this.axMapControl1.Size = new System.Drawing.Size(655, 439);
+            this.axMapControl1.Size = new System.Drawing.Size(777, 439);
             this.axMapControl1.TabIndex = 0;
             this.axMapControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.axMapControl1_OnMouseDown);
             this.axMapControl1.OnMouseUp += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseUpEventHandler(this.axMapControl1_OnMouseUp);
@@ -1556,7 +1725,7 @@
             this.xtraTabPage4.Controls.Add(this.labelControl1);
             this.xtraTabPage4.Controls.Add(this.axPageLayoutControl1);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(655, 439);
+            this.xtraTabPage4.Size = new System.Drawing.Size(693, 439);
             this.xtraTabPage4.Text = "制图输出";
             // 
             // labelControl1
@@ -1574,7 +1743,7 @@
             this.axPageLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.axPageLayoutControl1.Name = "axPageLayoutControl1";
             this.axPageLayoutControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPageLayoutControl1.OcxState")));
-            this.axPageLayoutControl1.Size = new System.Drawing.Size(655, 439);
+            this.axPageLayoutControl1.Size = new System.Drawing.Size(693, 439);
             this.axPageLayoutControl1.TabIndex = 0;
             this.axPageLayoutControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseDownEventHandler(this.axPageLayoutControl1_OnMouseDown);
             this.axPageLayoutControl1.OnMouseMove += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseMoveEventHandler(this.axPageLayoutControl1_OnMouseMove);
@@ -1589,7 +1758,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.Info_Show);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(242, 468);
+            this.splitContainerControl3.Size = new System.Drawing.Size(120, 468);
             this.splitContainerControl3.SplitterPosition = 383;
             this.splitContainerControl3.TabIndex = 1;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -1600,7 +1769,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.Tab_Zhibiao;
-            this.xtraTabControl1.Size = new System.Drawing.Size(242, 383);
+            this.xtraTabControl1.Size = new System.Drawing.Size(120, 383);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Tab_Zhibiao});
@@ -1609,7 +1778,7 @@
             // 
             this.Tab_Zhibiao.Controls.Add(this.panelEx2);
             this.Tab_Zhibiao.Name = "Tab_Zhibiao";
-            this.Tab_Zhibiao.Size = new System.Drawing.Size(236, 354);
+            this.Tab_Zhibiao.Size = new System.Drawing.Size(114, 354);
             this.Tab_Zhibiao.Text = "参数设置面板";
             // 
             // panelEx2
@@ -1617,15 +1786,13 @@
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx2.Controls.Add(this.buttonX4);
-            this.panelEx2.Controls.Add(this.buttonX5);
-            this.panelEx2.Controls.Add(this.buttonX3);
             this.panelEx2.Controls.Add(this.buttonX2);
             this.panelEx2.Controls.Add(this.buttonX1);
             this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx2.Location = new System.Drawing.Point(0, 0);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(236, 354);
+            this.panelEx2.Size = new System.Drawing.Size(114, 354);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1639,7 +1806,7 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(125, 120);
+            this.buttonX4.Location = new System.Drawing.Point(26, 234);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(66, 57);
             this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1647,47 +1814,23 @@
             this.buttonX4.Text = "退出";
             this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
-            // buttonX5
-            // 
-            this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX5.Location = new System.Drawing.Point(27, 210);
-            this.buttonX5.Name = "buttonX5";
-            this.buttonX5.Size = new System.Drawing.Size(66, 57);
-            this.buttonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX5.TabIndex = 0;
-            this.buttonX5.Text = "模块管理";
-            this.buttonX5.Click += new System.EventHandler(this.buttonX5_Click);
-            // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(27, 120);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(66, 57);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 0;
-            this.buttonX3.Text = "公式管理";
-            this.buttonX3.Click += new System.EventHandler(this.buttonX3_Click);
-            // 
             // buttonX2
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(125, 35);
+            this.buttonX2.Location = new System.Drawing.Point(26, 135);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(66, 57);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 0;
-            this.buttonX2.Text = "权重编辑";
+            this.buttonX2.Text = "权重管理";
             this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // buttonX1
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(27, 35);
+            this.buttonX1.Location = new System.Drawing.Point(26, 30);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Size = new System.Drawing.Size(66, 57);
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1708,7 +1851,7 @@
             this.Info_Show.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
     "0 Tahoma;}}\r\n{\\colortbl ;\\red32\\green31\\blue53;}\r\n\\viewkind4\\uc1\\pard\\cf1\\lang20" +
     "52\\f0\\fs18\\par\r\n}\r\n";
-            this.Info_Show.Size = new System.Drawing.Size(242, 80);
+            this.Info_Show.Size = new System.Drawing.Size(120, 80);
             this.Info_Show.TabIndex = 0;
             // 
             // ribbonPageGroup3
@@ -1762,7 +1905,7 @@
             // 
             this.ScaleLable.Location = new System.Drawing.Point(0, 0);
             this.ScaleLable.Name = "ScaleLable";
-            this.ScaleLable.Size = new System.Drawing.Size(75, 14);
+            this.ScaleLable.Size = new System.Drawing.Size(0, 14);
             this.ScaleLable.TabIndex = 0;
             // 
             // imageList1
@@ -1781,9 +1924,25 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem32);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem33);
+            this.ribbonPageGroup2.ItemLinks.Add(this.risk_print);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "专题图输出";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem19);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem20);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem21);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "适宜性评价";
+            // 
+            // barButtonItem22
+            // 
+            this.barButtonItem22.Caption = "新建评价任务";
+            this.barButtonItem22.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.Glyph")));
+            this.barButtonItem22.Id = 138;
+            this.barButtonItem22.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.LargeGlyph")));
+            this.barButtonItem22.Name = "barButtonItem22";
             // 
             // MainForm
             // 
@@ -1798,7 +1957,6 @@
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "基于障碍因子约束的建设用地空间拓展综合评价系统";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -1915,7 +2073,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage Page_LandSuitability;
         private DevExpress.XtraBars.Ribbon.RibbonPage Page_LandRisk;
         private DevExpress.XtraBars.Ribbon.RibbonPage Page_LandEcology;
-        private DevExpress.XtraBars.Ribbon.RibbonPage Pae_LandExtent;
         private DevExpress.XtraBars.Ribbon.RibbonPage Page_InfoQuery;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
@@ -1938,16 +2095,15 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
         private DevExpress.XtraBars.BarButtonItem barButtonItem31;
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem33;
+        private DevExpress.XtraBars.BarButtonItem risk_print;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
         private DevExpress.XtraBars.BarButtonItem barButtonItem34;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem35;
+        private DevExpress.XtraBars.BarButtonItem ecology_print;
         private DevExpress.XtraBars.BarButtonItem barButtonItem36;
         private DevExpress.XtraBars.BarButtonItem barButtonItem37;
         private DevExpress.XtraBars.BarButtonItem barButtonItem38;
@@ -1963,7 +2119,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup19;
         private DevExpress.XtraBars.BarButtonItem barButtonItem46;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem47;
+        private DevExpress.XtraBars.BarButtonItem final_print;
         private DevExpress.XtraBars.BarButtonItem barButtonItem48;
         private DevExpress.XtraBars.BarButtonItem barButtonItem49;
         private DevExpress.XtraBars.BarButtonItem barButtonItem50;
@@ -2000,12 +2156,30 @@
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl4;
         private ESRI.ArcGIS.Controls.AxMapControl axMapControl2;
         private DevComponents.DotNetBar.ButtonX buttonX4;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.ButtonX buttonX5;
-        private DevExpress.XtraBars.BarButtonItem print_land;
+        private DevExpress.XtraBars.BarButtonItem land_print;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem land_new;
+        private DevExpress.XtraBars.BarButtonItem land_zhibiao;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup land_evaluation;
+        private DevExpress.XtraBars.BarButtonItem land_start;
+        private DevExpress.XtraBars.BarButtonItem risk_new;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup risk_evaluation;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
+        private DevExpress.XtraBars.BarButtonItem risk_zhibiao;
+        private DevExpress.XtraBars.BarButtonItem risk_start;
+        private DevExpress.XtraBars.BarButtonItem ecology_new;
+        private DevExpress.XtraBars.BarButtonItem ecology_zhibiao;
+        private DevExpress.XtraBars.BarButtonItem ecology_start;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ecology_evaluation;
+        private DevExpress.XtraBars.BarButtonItem final_new;
+        private DevExpress.XtraBars.BarButtonItem final_zhibiao;
+        private DevExpress.XtraBars.BarButtonItem final_start;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem33;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup final_evaluation;
+        internal DevExpress.XtraBars.Ribbon.RibbonPage Pae_LandExtent;
     }
 }
 

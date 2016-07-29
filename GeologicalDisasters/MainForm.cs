@@ -127,6 +127,7 @@ namespace ComprehensiveEvaluation
                 {
                     axMapControl1.LoadMxFile(fi.FullName);
                     axMapControl1.ActiveView.Refresh();
+                   
                 }
             }
         }
@@ -770,7 +771,7 @@ namespace ComprehensiveEvaluation
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            TargetSystem.Target taget = new TargetSystem.Target();
+            TargetSystem.Target taget = new TargetSystem.Target("指标管理");
             GISHandler.GISTools.loadForm(taget);
         }
 
@@ -804,6 +805,26 @@ namespace ComprehensiveEvaluation
         {
             Print.PageLayoutControl.frmPageLayoutControl frmpage = new Print.PageLayoutControl.frmPageLayoutControl();
             frmpage.Show();
+        }
+
+        private void land_new_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTask("土地适宜性评价");
+        }
+
+        private void risk_new_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTask("土地灾害风险评价");
+        }
+
+        private void ecology_new_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTask("土地生态功能评价");
+        }
+
+        private void final_new_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTask("空间拓展综合评价");
         }
        
     }

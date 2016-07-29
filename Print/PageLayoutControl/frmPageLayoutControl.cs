@@ -560,8 +560,9 @@ namespace Print.PageLayoutControl
 
 		private void frmPageLayoutControl_Load(object sender, System.EventArgs e)
 		{
-           // mapFuntion = new MapFunction(, axPageLayoutControl);
-           
+            this.axPageLayoutControl.LoadMxFile(@"G:\MyProject\海西综合评价系统\数据库\邵武DEM.mxd");
+            //mapFuntion = new MapFunction(axMapControl, axPageLayoutControl);
+            
            
 		}
 
