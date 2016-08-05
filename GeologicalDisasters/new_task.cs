@@ -37,9 +37,10 @@ namespace ComprehensiveEvaluation
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            land_db = land_data.Text;
-            risk_db = risk_data.Text;
-            ecology_db = ecology_data.Text;
+            land_db = land_choose.Text;
+            risk_db = risk_choose.Text;
+            ecology_db = ecology_choose.Text;
+            taskControl.setTarget(evaluation_type);
             this.Close();
         }
 

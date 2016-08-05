@@ -36,7 +36,7 @@
             this.zhuanjia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.target_name = new System.Windows.Forms.ListView();
-            this.zhibiao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.target_weight = new System.Windows.Forms.ListView();
             this.Factory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.setGrade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -90,7 +90,7 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(618, 271);
-            this.splitContainerControl2.SplitterPosition = 146;
+            this.splitContainerControl2.SplitterPosition = 150;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
             // 
@@ -101,7 +101,7 @@
             this.Pro_weight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pro_weight.Location = new System.Drawing.Point(0, 0);
             this.Pro_weight.Name = "Pro_weight";
-            this.Pro_weight.Size = new System.Drawing.Size(146, 271);
+            this.Pro_weight.Size = new System.Drawing.Size(150, 271);
             this.Pro_weight.TabIndex = 0;
             this.Pro_weight.UseCompatibleStateImageBehavior = false;
             // 
@@ -119,7 +119,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.target_weight);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(467, 271);
+            this.splitContainerControl3.Size = new System.Drawing.Size(463, 271);
             this.splitContainerControl3.SplitterPosition = 195;
             this.splitContainerControl3.TabIndex = 0;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -127,19 +127,18 @@
             // target_name
             // 
             this.target_name.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.zhibiao});
+            this.columnHeader1});
             this.target_name.Dock = System.Windows.Forms.DockStyle.Fill;
             this.target_name.Location = new System.Drawing.Point(0, 0);
             this.target_name.Name = "target_name";
             this.target_name.Size = new System.Drawing.Size(195, 271);
-            this.target_name.TabIndex = 0;
+            this.target_name.TabIndex = 1;
             this.target_name.UseCompatibleStateImageBehavior = false;
-            this.target_name.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.target_name_ItemChecked);
             // 
-            // zhibiao
+            // columnHeader1
             // 
-            this.zhibiao.Text = "模块指标选择";
-            this.zhibiao.Width = 200;
+            this.columnHeader1.Text = "评价指标选择";
+            this.columnHeader1.Width = 150;
             // 
             // target_weight
             // 
@@ -150,7 +149,7 @@
             this.target_weight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.target_weight.Location = new System.Drawing.Point(0, 0);
             this.target_weight.Name = "target_weight";
-            this.target_weight.Size = new System.Drawing.Size(267, 271);
+            this.target_weight.Size = new System.Drawing.Size(263, 271);
             this.target_weight.TabIndex = 0;
             this.target_weight.UseCompatibleStateImageBehavior = false;
             // 
@@ -207,6 +206,7 @@
             this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX4.TabIndex = 2;
             this.buttonX4.Text = "保存";
+            this.buttonX4.Click += new System.EventHandler(this.buttonX4_Click);
             // 
             // buttonX3
             // 
@@ -217,7 +217,7 @@
             this.buttonX3.Size = new System.Drawing.Size(75, 23);
             this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX3.TabIndex = 2;
-            this.buttonX3.Text = "退出";
+            this.buttonX3.Text = "上一步";
             this.buttonX3.Click += new System.EventHandler(this.buttonX3_Click);
             // 
             // buttonX2
@@ -229,7 +229,8 @@
             this.buttonX2.Size = new System.Drawing.Size(75, 23);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 2;
-            this.buttonX2.Text = "计算";
+            this.buttonX2.Text = "参数计算";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // buttonX1
             // 
@@ -303,8 +304,8 @@
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "专家");
-            this.imageList1.Images.SetKeyName(1, "指标");
+            this.imageList1.Images.SetKeyName(0, "指标");
+            this.imageList1.Images.SetKeyName(1, "专家");
             // 
             // Weight
             // 
@@ -345,14 +346,14 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.ListView Pro_weight;
-        private System.Windows.Forms.ListView target_name;
         private System.Windows.Forms.ListView target_weight;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ColumnHeader zhuanjia;
         private DevComponents.DotNetBar.ButtonX buttonX4;
-        private System.Windows.Forms.ColumnHeader zhibiao;
         private System.Windows.Forms.ColumnHeader Factory;
         private System.Windows.Forms.ColumnHeader setGrade;
         private System.Windows.Forms.ColumnHeader setWeight;
+        private System.Windows.Forms.ListView target_name;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

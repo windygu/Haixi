@@ -71,8 +71,9 @@ namespace ComprehensiveEvaluation
         {
             setFormSize();
             //axMapControl1.LoadMxFile(SystemSet.Base_Map + "\\基础底图.mxd", 0, Type.Missing);
-            axMapControl1.LoadMxFile(@"G:\MyProject\海西综合评价系统\数据库\邵武DEM.mxd", 0, Type.Missing);  
+            axMapControl1.LoadMxFile(@"G:\MyProject\海西项目7月31出差成果资料（北师大）\2016年7月份成果备战\邵武市成果数据.mxd", 0, Type.Missing);  
             //axMapControl1.AddShapeFile(@"I:\四平项目\实验数据", "东丰县行政区域");
+            this.Info_Show.Focus();
             m_menuMap = new ToolbarMenuClass();
             m_menuLayer = new ToolbarMenuClass();
             p_menuLayer = new ToolbarMenuClass();
@@ -760,13 +761,13 @@ namespace ComprehensiveEvaluation
 
         private void buttonX2_Click(object sender, EventArgs e)
         {
-            TargetSystem.Weight weight = new TargetSystem.Weight();
-            GISHandler.GISTools.loadForm(weight);
+            taskControl.setWeight("指标管理");
         }
 
         private void buttonX4_Click(object sender, EventArgs e)
         {
-            Close();
+            if(MessageBox.Show("是否退出系统？","提示",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question)==DialogResult.Yes)
+               Close();
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
@@ -825,6 +826,50 @@ namespace ComprehensiveEvaluation
         private void final_new_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             taskControl.setTask("空间拓展综合评价");
+        }
+
+        private void land_zhibiao_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTarget("土地适宜性评价");
+        }
+
+        private void risk_zhibiao_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTarget("土地灾害风险评价");
+        }
+
+        private void ecology_zhibiao_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTarget("土地生态功能评价");
+        }
+
+        private void final_zhibiao_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setTarget("空间拓展综合评价");
+        }
+
+        private void risk_print_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Print.PageLayoutControl.frmPageLayoutControl frmpage = new Print.PageLayoutControl.frmPageLayoutControl();
+            frmpage.Show();
+        }
+
+        private void ecology_print_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Print.PageLayoutControl.frmPageLayoutControl frmpage = new Print.PageLayoutControl.frmPageLayoutControl();
+            frmpage.Show();
+        }
+
+        private void final_print_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Print.PageLayoutControl.frmPageLayoutControl frmpage = new Print.PageLayoutControl.frmPageLayoutControl();
+            frmpage.Show();
+        }
+
+        private void land_start_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            taskControl.setWait();
+
         }
        
     }

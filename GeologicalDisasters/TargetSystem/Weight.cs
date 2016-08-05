@@ -11,10 +11,17 @@ namespace ComprehensiveEvaluation.TargetSystem
 {
     public partial class Weight : Form
     {
-        
-        public Weight()
+        private ListViewItem lv_Pro;
+        private ListViewItem lv_Tar;
+        private ListViewItem lv_Wgt;
+
+        private string W_Type="权重管理";
+
+        public Weight(string weight)
         {
             InitializeComponent();
+            setInitialize();
+            this.W_Type = weight;
         }
 
         private void Weight_Load(object sender, EventArgs e)
@@ -24,50 +31,40 @@ namespace ComprehensiveEvaluation.TargetSystem
             //listView3.Columns.Add("因素", 100);
             //listView3.Columns.Add("打分", 100);
             //listView3.Columns.Add("权重", 100);
-            listviewSet(Pro_weight); 
-            listviewSet(target_name); 
-            listviewSet(target_weight);
-            addTarget(target_name, targetManager.land_target);
-            addTarget(target_name, targetManager.risk_target);
-            addTarget(target_name, targetManager.ecology_target);
-            addTarget(target_name, targetManager.final_target);
-          
-            addTarget(Pro_weight, targetManager.Pro_n1 );
-            addTarget(Pro_weight, targetManager.Pro_n2 );
-            addTarget(Pro_weight, targetManager.Pro_n3 );
-            addTarget(Pro_weight, targetManager.Pro_n4 );
-            addTarget(Pro_weight, targetManager.Pro_n5 );
-            addTarget(Pro_weight, targetManager.Pro_n6 );
-            addTarget(Pro_weight, targetManager.Pro_n7 );
-            addTarget(Pro_weight, targetManager.Pro_n8 );
-            addTarget(Pro_weight, targetManager.Pro_n9 );
-            addTarget(Pro_weight, targetManager.Pro_n10);
 
            
 
-            /*ListViewItem lv = new ListViewItem();
-            lv.ImageIndex = 0;
-            lv.Text = "Pro.Li";
-            //lv.SubItems.Add("这是一个地图模板");
-            Pro_weight.Items.Add(lv);
-            lv = new ListViewItem();
-            lv.ImageIndex = 1;
-            lv.Text = "土地适宜性指标";
-            target_name.Items.Add(lv);
-            lv = new ListViewItem();
-            lv.ImageIndex = 1;
-            lv.Text = "土地生态安全指标";
-            target_name.Items.Add(lv);
-            lv = new ListViewItem();
-            lv.ImageIndex = 1;
-            lv.Text = "土地灾害风险指标";
-            target_name.Items.Add(lv);
-            lv = new ListViewItem();
-            lv.Text = "交通条件";
-            lv.SubItems.Add("16.00");
-            lv.SubItems.Add("0.16");
-            target_weight.Items.Add(lv);
-*/
+
+
+        }
+        private void setInitialize()
+        {
+            listviewSet(Pro_weight);
+            listviewSet(target_name);
+            listviewSet(target_weight);
+
+            
+
+            addPro(Pro_weight, targetManager.Pro_n1, 1);
+            addPro(Pro_weight, targetManager.Pro_n2, 1);
+            addPro(Pro_weight, targetManager.Pro_n3, 1);
+            addPro(Pro_weight, targetManager.Pro_n4, 1);
+            addPro(Pro_weight, targetManager.Pro_n5, 1);
+            addPro(Pro_weight, targetManager.Pro_n6, 1);
+            addPro(Pro_weight, targetManager.Pro_n7, 1);
+            addPro(Pro_weight, targetManager.Pro_n8, 1);
+            addPro(Pro_weight, targetManager.Pro_n9, 1);
+            addPro(Pro_weight, targetManager.Pro_n10, 1);
+
+            addTar(target_name, targetManager.land_target, 0);
+            addTar(target_name, targetManager.risk_target, 0);
+            addTar(target_name, targetManager.ecology_target, 0);
+            addTar(target_name, targetManager.final_target, 0);
+
+            targetManager.add_t(targetManager.land_target, target_weight);
+            targetManager.add_t(targetManager.risk_target, target_weight);
+            targetManager.add_t(targetManager.ecology_target, target_weight);
+
         }
         private void listviewSet(System.Windows.Forms.ListView listview)
         {
@@ -81,10 +78,12 @@ namespace ComprehensiveEvaluation.TargetSystem
 
         private void buttonX3_Click(object sender, EventArgs e)
         {
-            targetManager.IsWeight = false;
+            //targetManager.IsWeight = false;
+            //this.Close();
+            taskControl.setTarget(W_Type);
             this.Close();
         }
-
+        /*
         private void target_name_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
             int t_count = target_name.Items.Count;
@@ -119,18 +118,44 @@ namespace ComprehensiveEvaluation.TargetSystem
 
             }
         }
-
-        private void addTarget(System.Windows.Forms.ListView listview, string targetName)
+*/
+        private void addPro(System.Windows.Forms.ListView listview, string targetName, int imageIndex)
         {
-            ListViewItem lv = new ListViewItem();
-            lv.ImageIndex = 0;
-            lv.Text = targetName;
-            if (targetManager.IsWeight)
-            {
-                lv.SubItems.Add("16.00");
-                lv.SubItems.Add("0.16");
-            }
-            listview.Items.Add(lv);
+            lv_Pro = new ListViewItem();
+            lv_Pro.ImageIndex = imageIndex;
+            lv_Pro.Text = targetName;
+            lv_Pro.Checked = true;
+            listview.Items.Add(lv_Pro);
+        }
+        private void addTar(System.Windows.Forms.ListView listview, string targetName, int imageIndex)
+        {
+            lv_Tar = new ListViewItem();
+            lv_Tar.ImageIndex = imageIndex;
+            lv_Tar.Text = targetName;
+            lv_Tar.Checked = true;
+            listview.Items.Add(lv_Tar);
+        }
+        private void addWgt(System.Windows.Forms.ListView listview, string targetName, int imageIndex)
+        {
+            lv_Wgt = new ListViewItem();
+            lv_Wgt.ImageIndex = imageIndex;
+            lv_Wgt.Text = targetName;
+            lv_Wgt.Checked = true;
+            listview.Items.Add(lv_Wgt);
+        }
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            this.buttonX2.Text = "正在计算···";
+            System.Threading.Thread.Sleep(3000);
+            MessageBox.Show("指标权重参数初始化完成功！");
+            this.buttonX2.Text = "参数计算";
+            
+        }
+
+        private void buttonX4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("保存成功！");
+            this.Close();
         }
     }
 }

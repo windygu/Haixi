@@ -69,7 +69,6 @@
             this.but_AddRST = new DevExpress.XtraBars.BarButtonItem();
             this.but_AddCAD = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
@@ -132,9 +131,7 @@
             this.barButtonItem64 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem65 = new DevExpress.XtraBars.BarButtonItem();
             this.User_Status = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.User_NowName = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.land_print = new DevExpress.XtraBars.BarButtonItem();
             this.land_new = new DevExpress.XtraBars.BarButtonItem();
             this.land_zhibiao = new DevExpress.XtraBars.BarButtonItem();
@@ -177,6 +174,9 @@
             this.ribbonPageGroup25 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.splitContainerControl4 = new DevExpress.XtraEditors.SplitContainerControl();
             this.xtraTabControl_Left = new DevExpress.XtraTab.XtraTabControl();
@@ -427,14 +427,10 @@
             this.Pae_LandExtent,
             this.Page_InfoQuery,
             this.ribbonPage2});
-            this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemButtonEdit1,
-            this.repositoryItemTextEdit1,
-            this.repositoryItemTextEdit2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1154, 147);
+            this.ribbonControl1.Size = new System.Drawing.Size(1161, 147);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // btn_Pan
@@ -725,16 +721,9 @@
             // barEditItem1
             // 
             this.barEditItem1.Caption = "barEditItem1";
-            this.barEditItem1.Edit = this.repositoryItemButtonEdit1;
+            this.barEditItem1.Edit = null;
             this.barEditItem1.Id = 69;
             this.barEditItem1.Name = "barEditItem1";
-            // 
-            // repositoryItemButtonEdit1
-            // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             // 
             // barButtonItem7
             // 
@@ -946,6 +935,7 @@
             this.risk_print.Id = 102;
             this.risk_print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("risk_print.LargeGlyph")));
             this.risk_print.Name = "risk_print";
+            this.risk_print.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.risk_print_ItemClick);
             // 
             // barButtonItem34
             // 
@@ -962,6 +952,7 @@
             this.ecology_print.Id = 104;
             this.ecology_print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ecology_print.LargeGlyph")));
             this.ecology_print.Name = "ecology_print";
+            this.ecology_print.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ecology_print_ItemClick);
             // 
             // barButtonItem36
             // 
@@ -1049,6 +1040,7 @@
             this.final_print.Id = 116;
             this.final_print.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("final_print.LargeGlyph")));
             this.final_print.Name = "final_print";
+            this.final_print.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.final_print_ItemClick);
             // 
             // barButtonItem48
             // 
@@ -1181,28 +1173,16 @@
             // User_Status
             // 
             this.User_Status.Caption = "当前用户为：";
-            this.User_Status.Edit = this.repositoryItemTextEdit1;
+            this.User_Status.Edit = null;
             this.User_Status.Id = 135;
             this.User_Status.Name = "User_Status";
-            this.User_Status.Width = 0;
-            // 
-            // repositoryItemTextEdit1
-            // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // User_NowName
             // 
             this.User_NowName.Caption = "barEditItem2";
-            this.User_NowName.Edit = this.repositoryItemTextEdit2;
+            this.User_NowName.Edit = null;
             this.User_NowName.Id = 136;
             this.User_NowName.Name = "User_NowName";
-            this.User_NowName.Width = 0;
-            // 
-            // repositoryItemTextEdit2
-            // 
-            this.repositoryItemTextEdit2.AutoHeight = false;
-            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
             // land_print
             // 
@@ -1228,6 +1208,7 @@
             this.land_zhibiao.Id = 139;
             this.land_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("land_zhibiao.LargeGlyph")));
             this.land_zhibiao.Name = "land_zhibiao";
+            this.land_zhibiao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.land_zhibiao_ItemClick);
             // 
             // land_start
             // 
@@ -1236,6 +1217,7 @@
             this.land_start.Id = 141;
             this.land_start.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("land_start.LargeGlyph")));
             this.land_start.Name = "land_start";
+            this.land_start.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.land_start_ItemClick);
             // 
             // risk_new
             // 
@@ -1252,6 +1234,7 @@
             this.risk_zhibiao.Id = 143;
             this.risk_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("risk_zhibiao.LargeGlyph")));
             this.risk_zhibiao.Name = "risk_zhibiao";
+            this.risk_zhibiao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.risk_zhibiao_ItemClick);
             // 
             // risk_start
             // 
@@ -1276,6 +1259,7 @@
             this.ecology_zhibiao.Id = 146;
             this.ecology_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ecology_zhibiao.LargeGlyph")));
             this.ecology_zhibiao.Name = "ecology_zhibiao";
+            this.ecology_zhibiao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ecology_zhibiao_ItemClick);
             // 
             // ecology_start
             // 
@@ -1300,6 +1284,7 @@
             this.final_zhibiao.Id = 149;
             this.final_zhibiao.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("final_zhibiao.LargeGlyph")));
             this.final_zhibiao.Name = "final_zhibiao";
+            this.final_zhibiao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.final_zhibiao_ItemClick);
             // 
             // final_start
             // 
@@ -1555,6 +1540,23 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // repositoryItemTextEdit2
+            // 
+            this.repositoryItemTextEdit2.AutoHeight = false;
+            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1564,7 +1566,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1154, 468);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1161, 468);
             this.splitContainerControl1.SplitterPosition = 241;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -1657,7 +1659,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(908, 468);
+            this.splitContainerControl2.Size = new System.Drawing.Size(915, 468);
             this.splitContainerControl2.SplitterPosition = 783;
             this.splitContainerControl2.TabIndex = 3;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -1725,7 +1727,7 @@
             this.xtraTabPage4.Controls.Add(this.labelControl1);
             this.xtraTabPage4.Controls.Add(this.axPageLayoutControl1);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(693, 439);
+            this.xtraTabPage4.Size = new System.Drawing.Size(777, 439);
             this.xtraTabPage4.Text = "制图输出";
             // 
             // labelControl1
@@ -1743,7 +1745,7 @@
             this.axPageLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.axPageLayoutControl1.Name = "axPageLayoutControl1";
             this.axPageLayoutControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPageLayoutControl1.OcxState")));
-            this.axPageLayoutControl1.Size = new System.Drawing.Size(693, 439);
+            this.axPageLayoutControl1.Size = new System.Drawing.Size(777, 439);
             this.axPageLayoutControl1.TabIndex = 0;
             this.axPageLayoutControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseDownEventHandler(this.axPageLayoutControl1_OnMouseDown);
             this.axPageLayoutControl1.OnMouseMove += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseMoveEventHandler(this.axPageLayoutControl1_OnMouseMove);
@@ -1758,8 +1760,8 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.Info_Show);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(120, 468);
-            this.splitContainerControl3.SplitterPosition = 383;
+            this.splitContainerControl3.Size = new System.Drawing.Size(127, 468);
+            this.splitContainerControl3.SplitterPosition = 324;
             this.splitContainerControl3.TabIndex = 1;
             this.splitContainerControl3.Text = "splitContainerControl3";
             // 
@@ -1769,7 +1771,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.Tab_Zhibiao;
-            this.xtraTabControl1.Size = new System.Drawing.Size(120, 383);
+            this.xtraTabControl1.Size = new System.Drawing.Size(127, 324);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Tab_Zhibiao});
@@ -1778,8 +1780,8 @@
             // 
             this.Tab_Zhibiao.Controls.Add(this.panelEx2);
             this.Tab_Zhibiao.Name = "Tab_Zhibiao";
-            this.Tab_Zhibiao.Size = new System.Drawing.Size(114, 354);
-            this.Tab_Zhibiao.Text = "参数设置面板";
+            this.Tab_Zhibiao.Size = new System.Drawing.Size(121, 295);
+            this.Tab_Zhibiao.Text = "参数管理面板";
             // 
             // panelEx2
             // 
@@ -1792,7 +1794,7 @@
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx2.Location = new System.Drawing.Point(0, 0);
             this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(114, 354);
+            this.panelEx2.Size = new System.Drawing.Size(121, 295);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1806,7 +1808,7 @@
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(26, 234);
+            this.buttonX4.Location = new System.Drawing.Point(26, 227);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(66, 57);
             this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1818,7 +1820,7 @@
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(26, 135);
+            this.buttonX2.Location = new System.Drawing.Point(26, 129);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(66, 57);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1848,11 +1850,10 @@
             this.Info_Show.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Info_Show.Location = new System.Drawing.Point(0, 0);
             this.Info_Show.Name = "Info_Show";
-            this.Info_Show.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "0 Tahoma;}}\r\n{\\colortbl ;\\red32\\green31\\blue53;}\r\n\\viewkind4\\uc1\\pard\\cf1\\lang20" +
-    "52\\f0\\fs18\\par\r\n}\r\n";
-            this.Info_Show.Size = new System.Drawing.Size(120, 80);
+            this.Info_Show.Rtf = resources.GetString("Info_Show.Rtf");
+            this.Info_Show.Size = new System.Drawing.Size(127, 139);
             this.Info_Show.TabIndex = 0;
+            this.Info_Show.Text = "操作信息输出：_";
             // 
             // ribbonPageGroup3
             // 
@@ -1949,7 +1950,7 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 615);
+            this.ClientSize = new System.Drawing.Size(1161, 615);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1957,6 +1958,7 @@
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "基于障碍因子约束的建设用地空间拓展综合评价系统";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();

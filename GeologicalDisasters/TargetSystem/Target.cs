@@ -149,6 +149,12 @@ namespace ComprehensiveEvaluation.TargetSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            taskControl.setTask(target_title);
+            this.Close();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            taskControl.setWeight(target_title);
             this.Close();
         }
     }
